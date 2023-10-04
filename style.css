@@ -1,0 +1,145 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 3em;
+    color: #007bff;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    animation: float 3s infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+h2, h3 {
+    color: #343a40;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #868e96;
+    transition: color 0.3s;
+}
+
+footer:hover {
+    color: #007bff;
+}
+
+.summary p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.certifications p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.coursework p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.skills p, .skills h3 {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.skills h2 {
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.skills h3 {
+    margin-top: 15px;
+    color: #343a40;
+}
+
+.skills h2, .skills h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.education p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #555;
+}
+
+.education h2 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.linkedIn {
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.linkedIn:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.profile-image {
+    max-width: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.profile-image:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
