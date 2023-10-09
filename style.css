@@ -14,7 +14,13 @@ body {
 
 .header h1 {
     font-size: 2em;
-    color: #007bff;
+    color: #000; /* Change color to black */
+    animation: spin 10s linear 5; /* Add spin animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(1800deg); } /* Spin 5 times (1800 degrees) */
 }
 
 .navigation {
@@ -119,4 +125,4 @@ form button:hover {
     margin-top: 10px;
 }
 
-/* Optional: Add more styles as per your preference */
+
