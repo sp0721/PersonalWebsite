@@ -9,6 +9,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
         .header h1 {
+            font-weight: bold;
             font-size: 2em;
             color: #007bff;
             animation: bounce 10s infinite;
@@ -25,14 +26,18 @@
                 transform: translateY(-15px);
             }
         }
+
+        body { margin: 0; }
+        canvas { display: block; }
     </style>
+    <script src="https://threejs.org/build/three.js"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="header-background"></div>
         <h1>Shreeji Patel</h1>
-        <p>TN, US</p>
+        <p>NASHVILLE,TN</p>
         <p>Shriji217@gmail.com</p>
         <p>931-628-9103</p>
         <a href="https://www.linkedin.com/in/shreeji-patel-1b3943129/" target="_blank" class="linkedIn">LinkedIn Profile</a>
@@ -49,7 +54,7 @@
 
     <section class="summary" id="summary">
         <h2>SUMMARY</h2>
-        <p>Dedicated student looking for an entry-level FRONTEND DEVELOPER ROLE/INTERN. Strong organizational and teamwork skills, as well as process improvement experience. Student currently pursuing Computer Science with zeal. Strong Communication and Problem-Solving skills, as well as the ability to work independently.</p>
+        <p>Dedicated student looking for an entry-level FRONTEND DEVELOPER JOB. Strong organizational and teamwork skills, as well as process improvement experience. Student currently pursuing Computer Science with zeal. Strong Communication and Problem-Solving skills, as well as the ability to work independently.</p>
     </section>
 
     <section class="education" id="education">
@@ -124,6 +129,40 @@
     <footer class="footer">
         <p>Designed and Coded by Shreeji Patel</p>
     </footer>
+
+    <script>
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('threejs-container').appendChild(renderer.domElement);
+
+        var geometry = new THREE.TextGeometry("Shreeji Patel", {
+            font: 'helvetiker',
+            size: 50,
+            height: 10,
+            curveSegments: 12,
+            bevelEnabled: true,
+            bevelThickness: 10,
+            bevelSize: 8,
+            bevelOffset: 0,
+            bevelSegments: 5
+        });
+
+        var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        var textMesh = new THREE.Mesh(geometry, material);
+        scene.add(textMesh);
+
+        camera.position.z = 100;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            textMesh.rotation.x += 0.01;
+            textMesh.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
 
     <script src="script.js"></script>
 </body>
