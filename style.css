@@ -6,14 +6,35 @@ body {
     padding: 20px;
     text-align: center;
     background-color: #f9f9f9;
+    animation: color-change-5x 5s infinite; /* Add color change animation */
 }
+
+@-webkit-keyframes color-change-5x {
+    0% { background: #7fdff1; } /* Light Blue */
+    25% { background: #c6a3ff; } /* Light Purple */
+    50% { background: #ff6f6f; } /* Light Red */
+    75% { background: #ffd77e; } /* Light Yellow */
+    100% { background: #8ff592; } /* Light Green */
+}
+
+@keyframes color-change-5x {
+    0% { background: #7fdff1; }
+    25% { background: #c6a3ff; }
+    50% { background: #ff6f6f; }
+    75% { background: #ffd77e; }
+    100% { background: #8ff592; }
+}
+
 
 .header {
     margin-bottom: 20px;
+    font-weight: bold;
+    color: #000;
 }
 
 .header h1 {
     font-size: 2em;
+    font-weight: bold;
     color: #000; /* Change color to black */
     animation: spin 10s linear 5; /* Add spin animation */
 }
@@ -72,9 +93,19 @@ footer {
     margin-top: 30px;
 }
 
+.footer {
+    text-align: center;
+    font-size: 1.2em; /* Increased font size */
+    font-weight: bold; /* Added bold font weight */
+    color: #868e96;
+    background-color: #f9f9f9; /* Added background color */
+    padding: 10px 0; /* Added some padding for better visual separation */
+}
+
 .footer p {
     margin: 0;
 }
+
 
 /* Form Styles */
 
