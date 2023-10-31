@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     const sendButton = document.querySelector('.sendButton');
 
@@ -48,3 +49,4 @@ window.addEventListener('resize', () => {
   fireworksContainer.style.width = `${window.innerWidth}px`;
   fireworksContainer.style.height = `${window.innerHeight}px`;
 });
+
