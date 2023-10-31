@@ -50,3 +50,6 @@ window.addEventListener('resize', () => {
   fireworksContainer.style.height = `${window.innerHeight}px`;
 });
 
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
