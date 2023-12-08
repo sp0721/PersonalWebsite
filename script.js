@@ -50,14 +50,7 @@ window.addEventListener('resize', () => {
   fireworksContainer.style.height = `${window.innerHeight}px`;
 });
 
- // Theme switcher functionality
-    const themeSwitcher = document.createElement('button');
-    themeSwitcher.id = 'theme-switcher';
-    themeSwitcher.innerText = 'Toggle Theme';
-    document.body.insertBefore(themeSwitcher, document.body.firstChild);
 
-    themeSwitcher.addEventListener('click', function () {
-        document.body.classList.toggle('dark-theme');
 
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
