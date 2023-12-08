@@ -377,5 +377,22 @@ form button:hover {
 .g-recaptcha {
     margin-top: 10px;
 }
+.dark-theme {
+    background-color: #333; /* Dark background */
+    color: #fff; /* Light text color */
+    /* Define other dark theme styles here */
+}
+
+/* Example of applying dark theme to specific elements */
+.dark-theme header,
+.dark-theme nav,
+.dark-theme section,
+.dark-theme footer {
+    background-color: #222; /* Darker background for elements */
+    color: #eee; /* Lighter text for readability */
+}
+
+/* More specific styles can be added as needed */
+
 
 
