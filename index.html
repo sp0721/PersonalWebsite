@@ -1,202 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shreeji Patel - Frontend Developer</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://threejs.org/build/three.js"></script>
 </head>
 <body>
 
-    <div class="loading">
-  <div class="cube">
-    <div class="side front"></div>
-    <div class="side back"></div>
-    <div class="side top"></div>
-    <div class="side bottom"></div>
-    <div class="side left"></div>
-    <div class="side right"></div>
-  </div>
-</div>
-
-    <div class="header">
-        <div class="header-background" id="threejs-background"></div>
-        <h1 class="animated fadeInUp">Shreeji Patel</h1>
-        <p class="animated fadeInUp">🏠NASHVILLE,TN🏠</p>
-        <p class="animated fadeInUp">👇REACH ME VIA LINKEDIN👇</p>
-        <button class="linkedInButton animated fadeInUp"><a href="https://www.linkedin.com/in/shreeji-patel-1b3943129/" target="_blank">🔗LinkedIn Profile🔗</a></button>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
     </div>
 
-    <nav class="navigation">
-        <a href="#summary"class="nav-link">Summary</a>
-        <a href="#education"class="nav-link">Education</a>
-        <a href="#certifications"class="nav-link">Certifications</a>
-        <a href="#work1"class="nav-link">WORK EXP1</a>
-        <a href="#work2"class="nav-link">WORK EXP2</a>
-        <a href="#work3"class="nav-link">WORK EXP3</a>
-        <a href="#coursework"class="nav-link">Coursework</a>
-        <a href="#skills"class="nav-link">Skills</a>
-        <a href="#contact"class="nav-link">Contact</a>
-        
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Shreeji Patel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#work1">Work Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <section class="summary" id="summary">
-        <h2>SUMMARY</h2>
-        <p>Dedicated student looking for an entry-level FRONTEND DEVELOPER OR DATABASE DEV Intership role. Strong organizational and teamwork skills, as well as process improvement experience. Student currently pursuing Computer Science with zeal. Strong Communication and Problem-Solving skills, as well as the ability to work independently.</p>
+    <!-- Hero Section with Parallax Effect -->
+    <header class="hero-section text-white text-center d-flex align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="display-4">Shreeji Patel</h1>
+            <p class="lead">🏠Nashville, TN | Frontend Developer 🏠</p>
+            <a href="https://www.linkedin.com/in/shreeji-patel-1b3943129/" target="_blank" class="btn btn-lg btn-outline-light mt-4">🔗 LinkedIn Profile 🔗</a>
+        </div>
+    </header>
+
+    <!-- Summary Section -->
+    <section id="summary" class="container my-5 glass">
+        <h2 class="text-center">Summary</h2>
+        <p class="text-center">Looking for an entry-level frontend developer or database dev internship role. Strong skills in organizational, teamwork, and communication.</p>
     </section>
 
-    <section class="education" id="education">
-        <h2>EDUCATION</h2>
-        <p>Bachelor of Science in Computer Science<br>
-            Middle Tennessee State University • Murfreesboro, TN • 2024</p>
+    <!-- Work Experience Section -->
+    <section id="work1" class="container my-5">
+        <h2 class="text-center">Work Experience</h2>
+        <p class="text-center">Cashier Manager, Marathon Petroleum Corporation (2017-2023)</p>
+        <p class="text-center"><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experienceModal">View Details</button></p>
 
-        <p>Associates of Science in Computer Science<br>
-            COLUMBIA STATE COMMUNITY COLLEGE • COLUMBIA, TN • 2022 • 3.25</p>
+        <!-- Modal for Work Experience -->
+        <div class="modal fade" id="experienceModal" tabindex="-1" aria-labelledby="experienceModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="experienceModalLabel">Work Experience Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Operated cash registers with precision and managed inventory effectively. Used a Python program to compare sales and payroll.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="certifications" id="certifications">
-        <h2>CERTIFICATIONS</h2>
-        <p>CompTIA IT Fundamentals Certification<br>
-            Issued by CompTIA • 2019<br>
-            The IT Fundamentals certificate remains relevant as it imparts essential IT skills crucial for advanced end-users and those pursuing careers in IT.</p>
-    </section>
-
-    <section class="work1" id="work1">
-        <h2>EXPERIENCE 1</h2>
-        <p>Cashier Manager<br>
-            Marathon Petroleum Corporation · Part-time • OCT 2017-DEC 2023<br>
-            Operated cash registers with precision and managed inventory effectively.<br>
-            Ensured a clean, organized environment and provided excellent customer service.<br>
-            Used a python program to compare sales, inventory and payrolls throughout the years. This made it
-            easier for analyzing sales and profits.<br>
-            Increased profits 15% by reducing the purchase cost.</p>
-
-    </section>
-
-    <section class="work2" id="work2">
-        <h2>EXPERIENCE 2</h2>
-        <p>INTERN<br>
-            Web Development Intern 
-            Innovista · Internship • May 2023 - Aug 2023
-            *Collaborated with a diverse team of developers to design, develop, and maintain dynamic web applications.<br>
-            *Led the development of user interfaces using HTML/CSS/REACT, focusing on enhancing accessibility and improving overall user experience.<br></p>
-
-    </section>
-
-       <section class="work3" id="work3">
-        <h2>EXPERIENCE 3</h2>
-        <p>Gas Station Cashier<br>
-            Gas Station Cashier 
-            Shell • Aug 2016 - Apr 2017
-            Provided exceptional customer Service and managed cash transactions efficiently.<br>
-            Maintained a clean and organized work environment.<br>
-    </section>
-
-    <section class="coursework" id="coursework">
-        <h2>COURSEWORK</h2>
-        <p><strong>Intro to Computer Systems</strong><br>
-            Middle Tennessee State University • 2023 • C , x86 assembly<br>
-            Worked on class Projects with various different requirements.</p>
-
-        <p><strong>Discrete Structures</strong><br>
-            MIDDLE TENNESSEE STATE UNIVERSITY • 2023 • C++</p>
-
-        <p><strong>Data Analysis</strong><br>
-            MIDDLE TENNESSEE STATE UNIVERSITY • 2023 • R<br>
-            Used R language to sort, graph, analyze different data sets.</p>
-
-        <p><strong>Assembly And Computer Org.</strong><br>
-            COLUMBIA STATE COMMUNITY COLLEGE • 2022 • ASSEMBLY</p>
-
-        <p><strong>Harvard CS50’s Intro To CS</strong><br>
-            edx.com • 2021 • HTML, CSS, PYTHON</p>
-        <p><strong>Software Engineering</strong></p><br>
-            Learned several new technologies such as Django and few other frameworks. Made a project that enabled the 
-            professor to schedule GTA'S for the computer science department. Technologies used in project- PYTHON(DJANGO), HTML/CSS, MYSQL
-        <p><strong>Web Technologies</strong></p><br>
-            Used technologies such as HTML/CSS/MYSQL/PHP to build various class projects. 
-        <p><strong>Database Management Systems</strong></p><br>
-            Used MYSQL/DJANGO to build a Hospital Management System. 
-        <p><strong>Theory of Programming Languages</strong></p><br>
-
-        <p><strong>Ethics and Computing Technolgies</strong></p><br>
-    </section>
-
-    <section class="skills" id="skills">
-        <h2>SKILLS</h2>
-        <p>FrontEnd: HTML, CSS, SWIFT, PHP<br>
-            BACKEND: JAVA, PYTHON, C, C++, MYSQL,SWIFT, R, DJANGO</p>
-
-        <h3>SUPPLEMENTARY SKILLS</h3>
-        <p>MS EXCEL, WORD, POWERPOINT</p>
-
-        <h3>SOFT SKILLS</h3>
-        <p>COMMUNICATION, TEAMWORK, PROBLEM-SOLVING, CUSTOMER SERVICE ORIENTATION, DECISION-MAKING</p>
-    </section>
-
-    <section class="contact" id="contact">
-        <h2>Contact Me</h2>
-        <form
-            name="contact"
-            method="POST"
-            data-netlify-recaptcha="true"
-            data-netlify="true"
-        >
-            <p>
-                <label>Email: <input type="text" name="name" /></label>
-            </p>
-            <p>
-                <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <div data-netlify-recaptcha="true"></div>
-            <p>
-                <button type="submit" class="sendButton">Send</button>
-            </p>
-        </form>
-    </section>
-
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
         <p>Designed and Coded by Shreeji Patel</p>
     </footer>
 
-    <script>
-        var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('threejs-container').appendChild(renderer.domElement);
-
-        var geometry = new THREE.TextGeometry("💻Shreeji Patel💻", {
-            font: 'helvetiker',
-            size: 75,
-            height: 10,
-            curveSegments: 12,
-            bevelEnabled: true,
-            bevelThickness: 10,
-            bevelSize: 8,
-            bevelOffset: 0,
-            bevelSegments: 5
-        });
-
-        var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        var textMesh = new THREE.Mesh(geometry, material);
-        scene.add(textMesh);
-
-        camera.position.z = 100;
-
-        function animate() {
-            requestAnimationFrame(animate);
-            textMesh.rotation.x += 0.01;
-            textMesh.rotation.y += 0.01;
-            renderer.render(scene, camera);
-        }
-        animate();
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
